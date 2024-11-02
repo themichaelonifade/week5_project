@@ -14,10 +14,11 @@ roc=$(sort -t ',' -k 5 -rg "$filepath" | sed '1q' | cut -d ',' -f6)
 
 # Locating the appropriate PNG by filtering the title
 image=$(find "$directory" -type f -name "*.png" | grep "$model" | grep "$version" | head -n 1)
+echo "Found image: $image"  # Debugging line
 image_generated="![Confusion matrix]($image)"
 
-# Creating the report file
-touch "baseline_model_report.md"
+# Creating or clearing the report file
+> "baseline_model_report.md"  # Clears the file if it exists
 
 # Writing into the created file
 cat <<EOT >> baseline_model_report.md
@@ -38,5 +39,5 @@ $image_generated
 
 EOT
 
-echo "Report generated and saved"
+echo "Report generated and saved as baseline_model_report.md"
 
