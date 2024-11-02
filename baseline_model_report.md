@@ -11,5 +11,6 @@
  * Precision: 0.84
  * ROC-AUC: 0.59
 
-![Confusion matrix](/c/Users/Victoria/TDI_DS/my_repos/week5_project/report/datav1.6_RandomForestClassifier_confusion_matrix.png)
+![Confusion matrix](report/datav1.6_RandomForestClassifier_confusion_matrix.png)
+
 
