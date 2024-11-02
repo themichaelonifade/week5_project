@@ -11,7 +11,7 @@
  * Precision: 0.84
  * ROC-AUC: 0.59
 
-# Locating the appropriate PNG by filtering the title
 
-![Confusion matrix](report/datav1.6_RandomForestClassifier_confusion_matrix.png)  # Config to display on remote repository
+![Confusion matrix](report/datav1.6_RandomForestClassifier_confusion_matrix.png) 
+
 
