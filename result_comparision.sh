@@ -12,10 +12,6 @@ recall=$(sort -t ',' -k 5 -rg "$filepath" | sed '1q' | cut -d ',' -f4)
 precision=$(sort -t ',' -k 5 -rg "$filepath" | sed '1q' | cut -d ',' -f3)
 roc=$(sort -t ',' -k 5 -rg "$filepath" | sed '1q' | cut -d ',' -f6)
 
-# Locating the appropriate PNG by filtering the title
-
-image_generated="report/data${version}_${model}_confusion_matrix.png"  # Config to display on remote repository
-image_file="![Confusion matrix](image_generated)"
 
 # Creating or clearing the report file
 > "baseline_model_report.md"  # Clears the file if it exists
@@ -35,7 +31,9 @@ cat <<EOT >> baseline_model_report.md
  * Precision: ${precision}
  * ROC-AUC: ${roc}
 
-$image_file
+# Locating the appropriate PNG by filtering the title
+
+![Confusion matrix](report/data${version}_${model}_confusion_matrix.png)  # Config to display on remote repository
 
 EOT
 
