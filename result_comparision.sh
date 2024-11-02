@@ -17,10 +17,10 @@ image=$(find "$directory" -type f -name "*.png" | grep "$model" | grep "$version
 image_generated="![Confusion matrix]($image)"
 
 # Creating the report file
-touch "${directory}/baseline_model_report.md"
+touch "baseline_model_report.md"
 
 # Writing into the created file
-cat <<EOT >> "${directory}/baseline_model_report.md"
+cat <<EOT >> baseline_model_report.md
 
 # Baseline Model Evaluation
 
